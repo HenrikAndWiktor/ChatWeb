@@ -46,6 +46,7 @@
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
     <input type="hidden" name="name" value="<?php echo $_COOKIE["username"] ?>">
     <textarea name="msg"></textarea>
+    <input type="submit">
 </form>
 </body>
 </html>
