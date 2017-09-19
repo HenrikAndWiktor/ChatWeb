@@ -5,7 +5,7 @@
 <table width="100%" border="1">
     <thead><tr><td><b>Meddelande</b></td><td><b>Namn</b></td></tr></thead>
     <?php
-    $conn = new mysqli("127.0.0.1","root",htmlspecialchars_decode("&#72;&#101;&#110;&#114;&#105;&#107;&#49;&#49;"));
+    $conn = new mysqli("127.0.0.1","root",file_get_contents("passwd"));
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
