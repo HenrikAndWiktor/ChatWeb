@@ -5,7 +5,7 @@
 <table width="100%" border="1">
     <thead><tr><td><b>Meddelande</b></td><td><b>Namn</b></td></tr></thead>
     <?php
-    $conn = new mysqli("127.0.0.1","dbuser",file_get_contents("passwd"));
+    $conn = new mysqli("127.0.0.1","root");
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
