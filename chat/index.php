@@ -19,7 +19,7 @@
     ?>
 </table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
+<form action="http://wiktoreriksson.se/ChatWeb/chat/index.php" method="POST">
     <input type="text" name="name" value="">
     <textarea name="msg" cols="200" rows="10"></textarea>
     <input type="submit">
