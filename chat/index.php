@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8"></head>
 <body>
-<table width="100%">
+<table width="100%" border="1">
     <thead><tr><td><b>Meddelande</b></td><td><b>Namn</b></td></tr></thead>
     <?php
     $conn = new mysqli("127.0.0.1","root",htmlspecialchars_decode("&#72;&#101;&#110;&#114;&#105;&#107;&#49;&#49;"));
