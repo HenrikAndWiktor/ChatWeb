@@ -20,8 +20,8 @@
 </table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
-    <label><input type="text" name="name" value=""></label>
-    <label><textarea name="msg" cols="200" rows="10"></textarea></label>
+    <input type="text" name="name" value="">
+    <textarea name="msg" cols="200" rows="10"></textarea>
     <input type="submit">
 </form>
 </body>
