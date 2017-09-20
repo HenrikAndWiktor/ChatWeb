@@ -25,7 +25,7 @@
 </table>
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
 <form action="http://wiktoreriksson.se/ChatWeb/chat/index.php" method="POST">
-    Namn:<input type="text" name="name" value='<?php echo (isset($_COOKIE["username"]))?$_COOKIE["username"]:"";?>'>
+    Namn:<input type="text" name="name" value='<?php echo $_COOKIE["username"];?>'>
     <label for="text-label">Medd:</label><textarea name="msg" id="text-label" cols="200" rows="10"></textarea>
     <input type="submit">
 </form>
