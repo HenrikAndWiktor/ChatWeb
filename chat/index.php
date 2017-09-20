@@ -15,6 +15,7 @@
     if(isset($_POST["msg"])&&isset($_POST["name"])) {
         setcookie("username",$_POST["name"],unixtime());
         $conn->query("INSERT INTO chattable (username,msg) VALUES (" . $_POST["name"] . "," . $_POST["msg"] . ");");
+        $conn->query("COMMIT;");
     }
     $mysql_table_res=$conn->query("SELECT * FROM chattable;");
     while(($row=$mysql_table_res->fetch_assoc())!==null) {
