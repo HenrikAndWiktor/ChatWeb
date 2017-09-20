@@ -18,7 +18,6 @@
     }
     ?>
 </table>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
 <form action="http://wiktoreriksson.se/ChatWeb/chat/index.php" method="POST">
     <input type="text" name="name" value="">
     <textarea name="msg" cols="200" rows="10"></textarea>
