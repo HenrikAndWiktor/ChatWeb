@@ -12,12 +12,11 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    if(isset($_POST["msg"])&&isset($_POST["name"])) {
+
         setcookie("username",$_POST["name"],unixtime());
         echo "Test acquired.";
         $conn->query("INSERT INTO chattable (username,msg) VALUES (" . $_POST["name"] . "," . $_POST["msg"] . ");");
         $conn->query("COMMIT;");
-    }
     $mysql_table_res=$conn->query("SELECT * FROM chattable;");
     while(($row=$mysql_table_res->fetch_assoc())!==null) {
         echo "<tr><td>" . $row["msg"] . "</td><td>" . $row["username"] . "</td></tr>";
