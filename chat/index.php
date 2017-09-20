@@ -5,14 +5,14 @@
 <table width="100%" border="1">
     <thead><tr><td><b>Meddelande</b></td><td><b>Namn</b></td></tr></thead>
     <?php
-    $conn = new mysqli("127.0.0.1","root");
+    $conn = new mysqli("127.0.0.1","root",null,"CHATDB");
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
     if(isset($_POST["msg"])&&isset($_POST["name"])) {
-        $conn->query("INSERT INTO CHATDB.chattable (username,msg) VALUES (" . $_POST["name"] . "," . $_POST["msg"] . ");");
+        $conn->query("INSERT INTO chattable (username,msg) VALUES (" . $_POST["name"] . "," . $_POST["msg"] . ");");
     }
-    $mysql_table_res=$conn->query("SELECT * FROM CHATDB.chattable;");
+    $mysql_table_res=$conn->query("SELECT * FROM chattable;");
     while($row=$mysql_table_res->fetch_assoc()) {
         echo "<tr><td>" . $row["msg"] . "</td><td>" . $row["username"] . "</td></tr>";
     }
