@@ -15,7 +15,7 @@
 
         setcookie("username",$_POST["name"],unixtime());
         echo "Test acquired.";
-        echo ($conn->query("INSERT INTO chattable (username,msg) VALUES (" . $_POST["name"] . "," . $_POST["msg"] . ");"))?"Success":"Error";
+        echo ($conn->query("INSERT INTO chattable (username,msg) VALUES (\"" . $_POST["name"] . "\",\"" . $_POST["msg"] . "\");"))?"Success":"Error";
         $conn->query("COMMIT;");
     $mysql_table_res=$conn->query("SELECT * FROM chattable;");
     while(($row=$mysql_table_res->fetch_assoc())!==null) {
