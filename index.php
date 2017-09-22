@@ -14,8 +14,9 @@
     }
 
     $mysql_table_res=$conn->query("SELECT * FROM chattable;");
+    $i=1;
     while(($row=$mysql_table_res->fetch_assoc())!==null) {
-        echo "<tr><td>" . $row["msg"] . "</td><td>" . $row["username"] . "</td></tr>";
+        echo "<tr id='row".$i."'><td id='row".$i."col1'>" . $row["msg"] . "</td><td id='row".$i++."col2'>" . $row["username"] . "</td></tr>";
     }
     ?>
 </table>
